@@ -1,6 +1,8 @@
 #!/bin/bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-apt-get install -y nginx nodejs
+curl -fsSL https://rpm.nodesource.com/setup_14.x | sudo bash -
+yum install -y nodejs
+amazon-linux-extras install -y nginx1
+systemctl enable --now nginx
 
 groupadd node-demo
 useradd -d /app -s /bin/false -g node-demo node-demo
@@ -28,7 +30,7 @@ http {
   }
 }' > /etc/nginx/nginx.conf
 
-service nginx restart
+systemctl restart nginx
 
 cd /app
 npm install
