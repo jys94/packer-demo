@@ -10,8 +10,7 @@ useradd -d /app -s /bin/false -g node-demo node-demo
 mv /tmp/app /app
 chown -R node-demo:node-demo /app
 
-echo 'user www-data;
-worker_processes auto;
+echo 'worker_processes auto;
 pid /run/nginx.pid;
 
 events {
