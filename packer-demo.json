@@ -7,10 +7,10 @@
     "type": "amazon-ebs",
     "access_key": "{{user `aws_access_key`}}",
     "secret_key": "{{user `aws_secret_key`}}",
-    "region": "eu-west-1",
-    "source_ami": "ami-0964eb2dc8b836eb6",
+    "region": "ap-northeast-2",
+    "source_ami": "ami-035233c9da2fabf52",
     "instance_type": "t2.micro",
-    "ssh_username": "ubuntu",
+    "ssh_username": "ec2-user",
     "ami_name": "packer-nodejs-demo {{timestamp}}"
   }],
   "provisioners": [
