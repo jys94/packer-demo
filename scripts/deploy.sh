@@ -31,7 +31,7 @@ http {
 
 systemctl restart nginx
 
-cd /app
+cd /app/app
 npm install
 
 echo '[Service]
