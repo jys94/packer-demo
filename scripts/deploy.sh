@@ -35,7 +35,7 @@ cd /app
 npm install
 
 echo '[Service]
-ExecStart=/usr/bin/node /app/index.js
+ExecStart=/usr/bin/node /app/app/index.js
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
